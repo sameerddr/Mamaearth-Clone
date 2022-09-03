@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.62;
+}
+
+.nav1 {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(212, 66, 76);
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
+}
+
+.nav1 a:hover {
+    text-decoration: underline;
+}
+
+
+/* -----------------Nav Part 2---------------------- */
+
+.nav2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    border-bottom: 1pt solid rgb(152, 152, 152);
+}
+
+.nav2 div {
+    margin-right: 30px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.forest {
+    width: 180px;
+    height: auto;
+}
+
+.btn {
+    padding: 10px 10px;
+    background-color: rgb(0, 175, 239);
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 400px;
+    height: 30px;
+    padding: 5px;
+    border-left: none;
+    border-top: 1px solid rgb(152, 152, 152);
+    border-bottom: 1px solid rgb(152, 152, 152);
+}
+
+.serach {
+    display: flex;
+}
+
+#glass {
+    font-size: 15px;
+    background-color: white;
+    padding-top: 7px;
+    border-top: 1px solid rgb(152, 152, 152);
+    border-bottom: 1px solid rgb(152, 152, 152);
+    border-left: 1px solid rgb(152, 152, 152);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 8px;
+}
+
+#magnify {
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+#icon {
+    color: blue;
+    font-size: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.icon {
+    color: rgb(92, 92, 92);
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* --------------------Hover Effect----------------------  */
+
+.sub-menu-wrap {
+    border-top: 2px solid rgb(0, 175, 239);
+    position: absolute;
+    top: 15%;
+    left: 79.5%;
+    width: 280px;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 26%) 0px 8px 16px;
+    transition: all 0.2s ease 0s;
+    color: rgb(45, 48, 46);
+    font-family: Lato;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sub-menu-wrap.open-menu {
+    display: block;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 120px;
+    background-color: rgb(152, 152, 152);
+    margin: 15px 0px 10px;
+}
+
+.user-info li {
+    font-size: 0.8rem;
+    list-style: none;
+    margin: 0.5rem;
+    padding: 0.25rem;
+}
+
+.user-info li:hover {
+    color: rgb(0, 175, 239);
+}
+
+.user-info hr {
+    width: 280px;
+}
+
+#popup {
+    color: rgb(0, 175, 239);
+}
+
+.good {
+    position: absolute;
+    bottom: 207px;
+    left: 40px;
+    font-size: 22px;
+}
+
+.third {
+    height: 40px;
+}
+
+.order {
+    position: absolute;
+    left: 40px;
+    bottom: 190px;
+    font-size: 14px;
+    padding-top: 4px;
+}
+
+.goodness {
+    color: rgb(0, 175, 239);
+}
+
+.insider {
+    color: rgb(44, 136, 44);
+}
+
+.logbut {
+    padding: 0.18rem;
+    width: 250px;
+    display: inline-block;
+    font-family: Roboto, Lato;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgb(0, 175, 239);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
