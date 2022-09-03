@@ -1,0 +1,73 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.nav{
+    width: 100vw;
+    height: 40px;
+    box-shadow: -1px 6px 5px 1px rgba(167,149,149,0.75);
+    display: flex;
+    align-items: center;
+    
+}
+.menu{
+    margin-left: 100px;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 40px;
+    color: rgb(46, 79, 46);
+}
+.baby-modal{
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    box-shadow: -1px 6px 5px 1px rgba(167,149,149,0.75);
+    border-top: 3px solid blue;
+    display: flex;
+    
+}
+.display-none{
+    position: fixed;
+    left: 200px;
+    top: 35px;
+    display: none;
+}
+.baby-modal a{
+    color: rgb(68, 79, 79);
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+}
+.baby-modal a:hover{
+    color: green;
+}
+.beauty-display-none{
+    position: fixed;
+    left: 280px;
+    top: 35px;
+    display: none;
+}
+.hair-display-none{
+    position: fixed;
+    left: 350px;
+    top: 35px;
+    display: none;
+}
+.face-display-none{
+    position: fixed;
+    left: 400px;
+    top: 35px;
+    display: none;
+}
+.body-display-none{
+    position: fixed;
+    left: 450px;
+    top: 35px;
+    display: none;
+}
