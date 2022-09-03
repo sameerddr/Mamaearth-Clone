@@ -6,8 +6,3 @@ function toggleMenu() {
 
 // ----------------
 var input = document.querySelector(".input");
-
-function input() {
-    input.style.border = "none"
-
-}
