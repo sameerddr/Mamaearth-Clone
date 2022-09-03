@@ -67,6 +67,12 @@
     align-items: center;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
 .input {
     width: 400px;
     height: 30px;
@@ -74,6 +80,7 @@
     border-left: none;
     border-top: 1px solid rgb(152, 152, 152);
     border-bottom: 1px solid rgb(152, 152, 152);
+    border-right: none;
 }
 
 .serach {
