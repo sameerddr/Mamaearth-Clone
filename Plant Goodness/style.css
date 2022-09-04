@@ -1,0 +1,128 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+.banner img{
+    width: 100vw;
+    height: auto;
+}
+
+.video-input-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.video-container{
+    border: 15px solid coral;
+    border-radius: 20px;
+    margin-top: 40px;
+    
+    
+}
+.video-container iframe{
+    border-radius: 5px;
+}
+
+.input-container input{
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 70px;
+}
+.input-container h1{
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 100;
+}
+.input-container button{
+    width: 315px;
+    height: 40px;
+    margin: 15px 70px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.promise-container{
+    
+    margin-left: 120px;
+}
+.promise{
+    width: auto;
+    height: 30px;
+    margin-top: 30px;
+    font-size: xx-large;
+    padding: 5px;
+    
+}
+.border{
+    height: 10px;
+    width: 100px;
+    background-color: black;
+    margin-left: 30px;
+    clip-path: polygon(49% 88%, 0% 100%, 100% 100%);
+}
+.promise-text-container{
+    display: flex;
+    justify-content: space-between;
+}
+.promise-text{
+    width: 900px;
+    color: darkslategray;
+    font-size: 20px;
+    line-height: 30px;
+}
+.plant-tree{
+    width: 250px;
+    height: 130px;
+    text-align: center;
+    font-size: large;
+    background-color: coral;
+    box-shadow: -1px 6px 5px 1px rgba(167,149,149,0.75);
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    right: 200px;
+    bottom: 50px;
+}
+.plant{
+    position: relative;
+    right: 180px;
+    
+}
+
+
+.photo-quote-section{
+    width: auto;
+    height: 350px;
+    display: flex;
+    background-color: beige;
+}
+.preview{
+    width: 250px;
+}
+#preview{
+    width: 50px;
+    height: 100px;
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+.ritu{
+    margin-top: 30px;
+}
+.ritu-quote{
+    width: 500px;
+    margin: 70px;
+    font-size: 30px;
+    color: chocolate;
+}
+#next{
+    width: 50px;
+    height: 100px;
+    position: relative;
+    top: 100px;
+}
