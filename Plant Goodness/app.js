@@ -59,6 +59,7 @@ function bodyShowData() {
 
 
 // ============================================== PLANT GOODNESS FUNCTIONALITY ======================================
+
 let previews = [
     {
         id: 1,
