@@ -4,7 +4,10 @@ body{
     box-sizing: border-box;
     
 }
-/****************************************************** NAV*************************************************************************/
+/****************************************************** NAV************************************************************************/
+
+
+
 .nav{
     width: 100%;
     height: 40px;
@@ -196,4 +199,134 @@ body{
     height: 100px;
     position: relative;
     top: 100px;
+}
+
+
+.planting_main_container{
+    width: 100%;
+    height: auto;
+}
+
+.heading{
+    text-align: center;
+    font-size: large;
+}
+
+.images_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+/******************************************* CHAT BOT ********************************/
+
+.chatbot{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+#chatbot{
+    width: 70px;
+    height: 70px;
+    font-size: xx-large;
+    border-radius: 50%;
+    border: none;
+    background-color: coral;
+    box-shadow: -1px 6px 5px 1px rgba(167,149,149,0.75);
+}
+
+.chatbot_popup_modal{
+    width: 400px;
+    height: 550px;
+    background-color: coral;
+    border-radius: 10px;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+}
+
+
+.chatbot_header h2{
+    color: white;
+    margin-left: 20px;
+}
+
+.para_image_container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.para{
+    color: white;
+}
+
+#down_btn{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background: none;
+    border: none;color: white;
+}
+
+.chatbot_main_section{
+    width: 100%;
+    height: 400px;
+    background-color: beige;
+    overflow: auto;
+}
+
+.left_center_right{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbot_main_left{
+    width: 200px;
+    height: 3px;
+    background-color: black;
+    clip-path: polygon(50% 70%, 0% 100%, 100% 100%);
+}
+
+.chatbot_main_right{
+    width: 200px;
+    height: 3px;
+    background-color: black;
+    clip-path: polygon(50% 70%, 0% 100%, 100% 100%);
+}
+.chatbot_footer{
+    background-color: wheat;
+    height: 70px;
+    border-radius: 0px 0px 10px 10px;
+    
+}
+
+
+.footer_input{
+    width: 75%;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+}
+
+.imoji_btn{
+    font-size: large;
+    background: none;
+    border: none;
+    color: crimson;
+}
+
+.paste_div{
+    width: fit-content;
+    min-height: fit-content;
+    font-size: large;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: coral;
+    color: white;
 }
