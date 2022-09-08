@@ -1,9 +1,3 @@
-let subMenu = document.querySelector("#subMenu");
-
-function toggleMenu() {
-  subMenu.classList.toggle("open-menu");
-}
-
 const body = document.querySelector("body");
 const baby_modal = document.querySelector(".display-none");
 function babyData() {
@@ -106,29 +100,73 @@ window.addEventListener("DOMContentLoaded", () => {
   console.log(butn);
 });
 
-
-
-
-
-
-
-
-
-
 //================================================= LOG IN ========================================
 
+const subMenuWrap = document.querySelector(".sub-menu-wrap");
 
+function toggleMenu() {
+  subMenuWrap.style.display = "block";
+}
 
-const subMenuWrap = document.querySelector('.sub-menu-wrap');
+function toggleMenuRemove() {
+  subMenuWrap.style.display = "none";
+}
 
-const loginPopUp = document.querySelector('.login_popup');
+const loginPopUpMainContainer = document.querySelector(
+  ".login_popup_main_container"
+);
 
-const loginBtn = document.querySelector('.logbut');
-
-const crossBtn = document.querySelector('#cross');
+const loginBtn = document.querySelector(".logbut");
+const crossBtn = document.querySelector("#cross");
+const header = document.querySelector('header');
+const main = document.querySelector('main');
 
 function login() {
-    loginPopUp.remove();
+  subMenuWrap.style.display = "none";
+  main.classList.toggle('active');
+  header.classList.toggle('active');
+  loginPopUpMainContainer.style.display = "block";
+}
+
+function loginPopupRemove() {
+  loginPopUpMainContainer.style.display = "none";
+  main.classList.toggle('active');
+  header.classList.toggle('active');
+}
+
+const loginWithOtpBtn = document.querySelector("#login_with_otp");
+const loginPhoneMunberInput = document.querySelector("#login_input");
+const signUpModal = document.querySelector(".signup_popup");
+const loginModal = document.querySelector(".login_popup");
+const signUpNumber = document.querySelector('#signup_phone_number');
+const loginNumber = document.querySelector('#login_input');
+
+function loginWithOtp() {
+  if (loginPhoneMunberInput.value.length > 1) {
+    loginModal.remove();
+    signUpModal.style.display = "block";
+    signUpNumber.value = loginNumber.value;
+    loginPopUpMainContainer.append(signUpModal);
+  }
 }
 
 
+function backToLogin() {
+  signUpModal.remove();
+  loginPopUpMainContainer.append(loginModal);
+}
+
+
+
+const signUpBtn = document.querySelector('#signup_btn');
+const userData = [];
+signUpBtn.addEventListener('click', (event)=>{
+
+  const fName = document.querySelector('#signup_first_name');
+  const lName = document.querySelector('#signup_last_name');
+  const eMail = document.querySelector('#signup_email_id');
+
+   let userDetails = {
+  
+   }
+});

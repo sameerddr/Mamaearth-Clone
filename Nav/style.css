@@ -3,7 +3,9 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
-
+.active{
+  filter: blur(7px);
+}
 .nav1 {
   width: 100%;
   height: 30px;
@@ -135,9 +137,9 @@ select:focus {
   cursor: pointer;
 }
 
-.sub-menu-wrap.open-menu {
+/* .sub-menu-wrap .open-menu {
   display: block;
-}
+} */
 
 .sub-menu hr {
   border: 0;
@@ -276,7 +278,7 @@ select:focus {
   display: none;
 }
 
-/************************************************* MAI SECTION **************************************/
+/************************************************* MAIN SECTION **************************************/
 
 .container {
   height: 100vh;
@@ -393,82 +395,133 @@ p {
   padding-top: 80px;
 }
 
+/****************************** LOGIN *************************/
 
+.login_popup_main_container{
+  width: 400px;
+  height: 600px;
+  background-color: darkgrey;
+  position: fixed;
+  top: 100px;
+  left: 40%;
+  border-radius: 10px;
+  display: none;
+  
+}
 
-
-
-
-
-
-        /****************************** LOGIN *************************/
-
+.login_popup_main_container::after{
+  content: '';
+  background-color: #333333;
+}
 
 .login_popup{
-    width: 400px;
-    height: 600px;
-    background-color: darkgrey;
-    position: fixed;
-    top: 100px;
-    left: 40%;
-    border-radius: 10px;
-    
-
+  height: auto;
+  width: auto;
 }
 
-.login_heading{
-    margin: 10px 45px;
-    font-weight: 700;
-    display: block;
-    color: aqua;
-    
+.login_heading {
+  margin: 10px 45px;
+  font-weight: 700;
+  display: block;
+  color: aqua;
+}
+
+.ligin_mamacash {
+  margin: 30px 22px;
+}
+
+.login_img_text {
+  display: flex;
+  color: white;
+  margin: 10px 22px;
+}
+
+.login_input {
+  margin: 20px 20px;
+}
+
+.login_input input {
+  width: 340px;
+  height: 40px;
+  font-size: 16px;
+  padding-left: 15px;
+  border-radius: 10px;
+  border: none;
+}
+
+.login_term_condition {
+  margin: 30px 20px;
+  font-size: 17px;
+  color: white;
+}
+
+.login_with_otp {
+  width: 350px;
+  height: 40px;
+  margin: 10px 20px;
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: darkgray;
 }
 
 
-.ligin_mamacash{
-    margin: 30px 22px;
+
+/**************************** SIGN UP *************************/
+
+.signup_popup{
+  width: 400px;
+  height: 500px;
+  background-color: darkgray;
+  display: none;
+}
+.signup_heading{
+  margin: 10px 40px;
+  font-weight: 700;
+  display: block;
+  color: aqua;
 }
 
-.login_img_text{
-    display: flex;
-    color: white;
-    margin: 10px 22px;
-} 
-
-.login_input{
-    margin: 20px 20px;
+.signup_input{
+  margin: 20px 20px;
+}
+.signup_input input{
+  width: 330px;
+  height: 30px;
+  padding-left: 15px;
+  border: 1px solid aqua;
 }
 
-.login_input input{
-    width: 340px;
-    height: 40px;
-    font-size: 16px;
-    padding-left: 15px;
-    border-radius: 10px;
-    border: none;
+.signup_gender{
+  margin: 20px 20px;
+  color: aqua;
 }
 
-.login_term_condition{
-    margin: 30px 20px;
-    font-size: 17px;
-    color: white;
-    
+#signup_btn{
+  width: 350px;
+  height: 40px;
+  margin: 10px 20px;
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.login_with_otp{
-    width: 350px;
-    height: 40px;
-    margin: 10px 20px;
-    background-color: lightskyblue;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#cross{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background-color: darkgray;
+#signup_left_arrow{
+  position: absolute;
+  top: 23px;
+  left: 10px;
+  background: none;
+  border: none;
+  color: aqua;
 }
