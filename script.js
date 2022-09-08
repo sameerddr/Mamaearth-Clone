@@ -107,7 +107,36 @@ window.addEventListener('DOMContentLoaded', ()=>{
         </div>`
         allproducts.innerHTML+=html
         })).catch(err=>err)
-        const butn = document.getElementsByClassName("butn")
-        const sample = Array.from(butn)
-        console.log(butn);
+        // const addCartBtn = document.getElementsByClassName("butn")
+        // addCartBtn.addEventListener("click", ()=>{
+        //     alert("added to cart")
+        // })
 })
+const all = document.getElementById("all")
+console.log(all);
+
+all.addEventListener("click", ()=>{
+    fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/21/products")
+    .then(res=>res.json()).then(data=>{
+        show(data.bestsellers)}).catch(err=>err)
+})
+
+function show(data){
+    let prodItem;
+    allproducts.innerHTML=null
+    console.log("data", data);
+    data.map((e)=>{
+        console.log("each",e.images[0]);
+         prodItem=`<div class="c1">
+            <div class="logo">Best seller</div>
+            <img src=${e.images[0]} alt="mamaearth" class="img1">
+            <p>${e.name}</p>
+            <p class="para"><i class="fa-solid fa-star rate"></i>${5*parseInt(item.avg_rating_percent)/100}<span> | ${item.review_count} reviews</span></p>
+            <p> Rs.${e.price}</p>
+            <button id=${e.id} class="butn">Add to cart</button>
+        </div>`
+        html=`<div>hello</div>`
+        allproducts.innerHTML+=html
+        
+    })
+}
