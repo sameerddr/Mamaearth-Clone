@@ -88,7 +88,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <p>${item.name}</p>
             <p class="para"><i class="fa-solid fa-star rate"></i>${item.avg_rating_percent}<span> | ${item.review_count}<span></p>
             <p> Rs.${item.price}</p>
-            <button id=${item.id} class="butn" onclick="add_to_cart()" >Add to cart</button>
+            <button id=${item.id} class="butn" onclick="add_to_cart(event)" >Add to cart</button>
         </div>`;
         container.innerHTML += html;
       });
@@ -104,52 +104,65 @@ window.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       console.log(data);
       data.bestsellers.map((item) => {
-        // console.log(item.images[0]);
+        // console.log(item);
         html = `<div class="g1">
             <div class="gift_logo">Best seller</div>
             <img src=${item.images[0]} alt="mamaearth" class="p_img">
             <p>${item.name}</p>
             <p class="cont"><i class="fa-solid fa-star rate"></i>${item.avg_rating_percent}<span> | ${item.review_count}<span></p>
             <p> Rs.${item.price}</p>
-            <button id=${item.id} class="gift_btn" onclick="add_to_cart()"  >Add to cart</button>
-        </div>`;
+            <button id=${item.id}  class="gift_btn" onclick="add_to_cart(event)"  >Add to cart</button>
+            </div>`;
         data_fetch.innerHTML += html;
       });
     });
 });
 
-// ----------------------------add to cart--------------------
-// let cartbut = document.querySelector(".butn");
-// cartbut.addEventListener("onclick", function add_to_cart(pimg, pname, price) {
-// cartbut.addEventListener("onclick", function add_to_cart() {
-// console.log("working");
-// let cart = localStorage.getItem("cart");
-// if (cart == null) {
-//     // no cart yet
-//     let product = [];
-//     let pro = { productIMG: pimg, productName: pname, productprice: price };
-//     product.push(pro);
-//     localStorage.setItem("cart", JSON.stringify(product));
-//     console.log("Product is added for the first time");
-// } else {
-//     // cart is alreday present
-//     let pcart = JSON.parse(cart);
-//     let oldpro = pcart.find((item)=>{
-//         item.productIMG
-//     })
-// }
-// }
-// });
+// --------------------------------------------------
+// ----------   Pop-up-------
 
-function add_to_cart(pimg, pname, price) {
+document.querySelector(".icon").addEventListener("click", function () {
+  document.querySelector(".cart_ITEM").style.display = "flex";
+});
+
+document.querySelector("#mycarticon").addEventListener("click", function () {
+  document.querySelector(".cart_ITEM").style.display = "none";
+});
+
+function add_to_cart(e) {
+  console.log(e.target);
+  console.log(e.target.id);
+  var cart_content3 = document.querySelector(".cart_content3");
+  fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
+    .then((re) => re.json())
+    .then((dat) => {
+      console.log(dat);
+      // console.log(e.target.id);
+      console.log("equal hai");
+      dat.bestsellers.map((item) => {
+        let idvalue = item.id;
+        console.log(idvalue);
+        if (idvalue == e.target.id) {
+          c = `<div class="cart_data">
+            <div class="gift_logo">Best seller</div>
+            <img src=${item.images[0]} alt="mamaearth" class="p_img">
+            <p>${item.name}</p>
+            <p class="cont"><i class="fa-solid fa-star rate"></i>${item.avg_rating_percent}<span> | ${item.review_count}<span></p>
+            <p> Rs.${item.price}</p>
+            `;
+          cart_content3.innerHTML += c;
+          // console.log(c);
+        }
+      });
+    });
+  //   let a = item.id;
+  //   console.log(a);
+  //   let local = localStorage.setItem("id", a);
+
+  // let cartid = document.querySelector("#")
   console.log("jwhdjkwfkfkwsggwbjs");
-  let cart = localStorage.getItem("cart");
-  if (cart == null) {
-    // no cart yet
-    let product = [];
-    let pro = { productIMG: pimg, productName: pname, productprice: price };
-    product.push(pro);
-    localStorage.setItem("cart", JSON.stringify(product));
-    console.log("Product is added for the first time");
-  }
+  //   let cart = localStorage.getItem("cart");
+  //   let cart = localStorage.getItem("id");
+  const cart_data = document.querySelector(".cart");
 }
+// }
