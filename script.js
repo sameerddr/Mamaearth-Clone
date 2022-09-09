@@ -155,11 +155,7 @@ function add_to_cart(e) {
         }
       });
     });
-  //   let a = item.id;
-  //   console.log(a);
-  //   let local = localStorage.setItem("id", a);
 
-  // let cartid = document.querySelector("#")
   console.log("jwhdjkwfkfkwsggwbjs");
   //   let cart = localStorage.getItem("cart");
   //   let cart = localStorage.getItem("id");
