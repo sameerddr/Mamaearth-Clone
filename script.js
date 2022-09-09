@@ -157,8 +157,6 @@ function add_to_cart(e) {
     });
 
   console.log("jwhdjkwfkfkwsggwbjs");
-  //   let cart = localStorage.getItem("cart");
-  //   let cart = localStorage.getItem("id");
   const cart_data = document.querySelector(".cart");
 }
 // }
