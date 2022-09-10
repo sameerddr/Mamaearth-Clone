@@ -487,14 +487,14 @@ p {
 
 .cart_ITEM {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(70%, -50%);
+    top: 0%;
+    left: 70%;
+    /* transform: translate(70%, -50%); */
     text-align: center;
     color: rgb(0, 0, 0);
     background-color: rgb(241, 243, 245);
-    width: 400px;
-    height: 100%;
+    width: 410px;
+    height: auto;
     display: none;
 }
 
@@ -514,7 +514,7 @@ p {
 }
 
 .cart_content2 {
-    width: 130%;
+    width: 90%;
     height: 100px;
     background-color: rgb(236, 248, 253);
     border: 1px solid rgba(0, 174, 239, 0.27);
@@ -548,10 +548,6 @@ p {
 .coupan {
     cursor: pointer;
     padding: 5px 5px 0px;
-    /* width: max-content; */
-    /* width: 378px; */
-    /* height: 73px; */
-    /* margin: auto 0px; */
     margin-right: 20px;
     background-color: white;
     border: 1px dashed rgb(0, 174, 239);
@@ -563,4 +559,29 @@ p {
     text-align: center;
     color: rgb(0, 174, 239);
     width: max-content;
+}
+
+.cart_data {
+    height: 100px;
+    width: 400px;
+    display: flex;
+    border-bottom: 1px solid black;
+    margin: 10px;
+}
+
+.cart_image_name {
+    width: 100px;
+    height: 70px;
+}
+
+.image_name {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.price_name {
+    font-size: smaller;
+    position: relative;
+    top: 70px;
+    right: 20px;
 }

@@ -144,11 +144,9 @@ function add_to_cart(e) {
         console.log(idvalue);
         if (idvalue == e.target.id) {
           c = `<div class="cart_data">
-            <div class="gift_logo">Best seller</div>
-            <img src=${item.images[0]} alt="mamaearth" class="p_img">
-            <p>${item.name}</p>
-            <p class="cont"><i class="fa-solid fa-star rate"></i>${item.avg_rating_percent}<span> | ${item.review_count}<span></p>
-            <p> Rs.${item.price}</p>
+            <img src=${item.images[0]} alt="mamaearth" class="cart_image_name">
+            <p class="image_name" >${item.name}</p>
+            <p class="price_name" > Rs.${item.price}</p>
             `;
           cart_content3.innerHTML += c;
           // console.log(c);
