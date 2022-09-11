@@ -157,7 +157,6 @@ function add_to_cart(e) {
   console.log("jwhdjkwfkfkwsggwbjs");
   const cart_data = document.querySelector(".cart");
 }
-// }
 function deleteData() {
   console.log("WOrkin");
 }
