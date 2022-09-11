@@ -13,9 +13,6 @@ function babyData() {
   baby_modal.style.display = "flex";
   beauty.style.display = "none";
   hair.style.display = "none";
-  // setTimeout(() => {
-  //     baby_modal.style.display = 'none';
-  // }, 10000);
 }
 
 function babyDataRemove() {
@@ -130,31 +127,37 @@ document.querySelector("#mycarticon").addEventListener("click", function () {
 });
 
 function add_to_cart(e) {
-  console.log(e.target);
+  // console.log(e.target);
   console.log(e.target.id);
   var cart_content3 = document.querySelector(".cart_content3");
   fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
     .then((re) => re.json())
     .then((dat) => {
-      console.log(dat);
+      // console.log(dat);
       // console.log(e.target.id);
       console.log("equal hai");
       dat.bestsellers.map((item) => {
         let idvalue = item.id;
         console.log(idvalue);
+
         if (idvalue == e.target.id) {
           c = `<div class="cart_data">
             <img src=${item.images[0]} alt="mamaearth" class="cart_image_name">
             <p class="image_name" >${item.name}</p>
             <p class="price_name" > Rs.${item.price}</p>
+            // <button class="deletebutton" onclick="deleteData(event)">Delete Item</button>
             `;
+          // console.log("item", item);
+          localStorage.setItem("itemValues", item);
           cart_content3.innerHTML += c;
-          // console.log(c);
+          console.log(c);
         }
       });
     });
-
   console.log("jwhdjkwfkfkwsggwbjs");
   const cart_data = document.querySelector(".cart");
 }
 // }
+function deleteData() {
+  console.log("WOrkin");
+}
