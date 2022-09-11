@@ -239,7 +239,7 @@ select:focus {
   display: flex;
 }
 .display-none {
-  position: fixed;
+  position: absolute;
   left: 200px;
   top: 150px;
   display: none;
@@ -254,25 +254,25 @@ select:focus {
   color: green;
 }
 .beauty-display-none {
-  position: fixed;
+  position: absolute;
   left: 280px;
   top: 150px;
   display: none;
 }
 .hair-display-none {
-  position: fixed;
+  position: absolute;
   left: 350px;
   top: 150px;
   display: none;
 }
 .face-display-none {
-  position: fixed;
+  position: absolute;
   left: 400px;
   top: 150px;
   display: none;
 }
 .body-display-none {
-  position: fixed;
+  position: absolute;
   left: 450px;
   top: 150px;
   display: none;
@@ -400,7 +400,7 @@ p {
 .login_popup_main_container{
   width: 400px;
   height: 600px;
-  background-color: darkgrey;
+  background-color: white;
   position: fixed;
   top: 100px;
   left: 40%;
@@ -423,7 +423,7 @@ p {
   margin: 10px 45px;
   font-weight: 700;
   display: block;
-  color: aqua;
+  color: black;
 }
 
 .ligin_mamacash {
@@ -432,7 +432,7 @@ p {
 
 .login_img_text {
   display: flex;
-  color: white;
+  color: black;
   margin: 10px 22px;
 }
 
@@ -452,7 +452,7 @@ p {
 .login_term_condition {
   margin: 30px 20px;
   font-size: 17px;
-  color: white;
+  color: black;
 }
 
 .login_with_otp {
@@ -471,7 +471,7 @@ p {
   top: 10px;
   right: 10px;
   border: none;
-  background-color: darkgray;
+  background-color: white;
 }
 
 
@@ -481,7 +481,7 @@ p {
 .signup_popup{
   width: 400px;
   height: 500px;
-  background-color: darkgray;
+  background-color: white;
   display: none;
 }
 .signup_heading{
@@ -533,15 +533,15 @@ p {
 .signin_popup{
   width: 400px;
   height: 500px;
-  background-color: darkgray;
-  
+  background-color: white;
+  display: none;
 }
 
 .signin_heading{
   margin: 10px 80px;
   font-weight: 700;
   display: block;
-  color: aqua;
+  color: black;
 }
 
 .signin_email{
@@ -552,7 +552,7 @@ p {
   width: 330px;
   height: 30px;
   padding-left: 15px;
-  border: 1px solid aqua;
+  border: 1px solid black;
 }
 
 #signin_btn{

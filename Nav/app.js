@@ -111,8 +111,7 @@ const loginModal = document.querySelector(".login_popup");
 const signUpNumber = document.querySelector("#signup_phone_number");
 const loginNumber = document.querySelector("#login_input");
 const signUpBtn = document.querySelector("#signup_btn");
-const signInModal = document.querySelector('.signin_popup');
-
+const signInModal = document.querySelector(".signin_popup");
 
 function toggleMenu() {
   subMenuWrap.style.display = "block";
@@ -175,41 +174,38 @@ signUpBtn.addEventListener("click", (event) => {
       userEmail: eMail,
     };
     userData.push(userDetails);
-    localStorage.setItem('userData',JSON.stringify(userData))
-    
+    localStorage.setItem("userData", JSON.stringify(userData));
+    signUpModal.remove();
+    signInModal.style.display = 'block';
+    loginPopUpMainContainer.append(signInModal);
   } else {
     alert("user already exist");
   }
-  signUpModal.remove();
-  loginPopUpMainContainer.append(signInModal)
-
 });
 
-const signInCrossBtn = document.querySelector('#signin_cross');
-signInCrossBtn.addEventListener('click', (event)=>{
+const signInCrossBtn = document.querySelector("#signin_cross");
+signInCrossBtn.addEventListener("click", (event) => {
   signInModal.remove();
-  loginPopUpMainContainer.append(loginModal)
+  loginPopUpMainContainer.append(loginModal);
   loginPopUpMainContainer.style.display = "none";
   main.classList.toggle("active");
   header.classList.toggle("active");
-})
+});
 
+const signInBtn = document.querySelector("#signin_btn");
+const signInEmail = document.querySelector("#signin_email");
 
-const signInBtn = document.querySelector('#signin_btn');
-const signInEmail = document.querySelector('#signin_email').value;
+JSON.parse(localStorage.getItem(userData));
 
+signInBtn.addEventListener("click", (event) => {
+  
+  userData.map((data) => {
 
-signInBtn.addEventListener('click', (event)=>{
-
-  userData.map((data)=>{
-    if (data.userEmail == signInEmail) {
+    console.log(data.userEmail);
+    if (data.userEmail === signInEmail.value) {
       loginPopUpMainContainer.style.display = "none";
-    main.classList.toggle("active");
-    header.classList.toggle("active");
-    }else{
-      alert('Please Sign Up')
-    }
-  })
-  
-  
-})
+      main.classList.toggle("active");
+      header.classList.toggle("active");
+    } 
+  });
+});
