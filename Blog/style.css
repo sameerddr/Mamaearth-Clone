@@ -90,7 +90,7 @@ body {
 }
 .links_div div{
     margin-bottom: 10px;
-    color: black;
+    color: navy;
 }
 .links_div a{
     text-decoration: none;
@@ -122,9 +122,4 @@ body {
     text-align: center;
     padding-top: 20px;
     font-size: 18px;
-}
-.home a{
-  color: #0000;
-  text-decoration: none;
-  font-weight: bolder;
 }
