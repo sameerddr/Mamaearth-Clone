@@ -183,7 +183,9 @@ else{
   }
   console.log(userData);
   signUpModal.remove();
+  signInModal.style.display="flex"
   loginPopUpMainContainer.append(signInModal)
+
 }
 
 });

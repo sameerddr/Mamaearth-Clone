@@ -146,15 +146,15 @@ fileterBtn.addEventListener('click', async (e) => {
     let index = 17;
     console.log(e.target.id);
     switch (e.target.id) {
-        case 'all': index = 16;
+        case 'all': index = 33;
         break;
         case 'hair': index = 27;
         break;
         case 'face': index = 21;
         break;
-        case 'body': index = 29;
+        case 'body': index = 26;
         break;
-        case 'baby': index = 31;
+        case 'baby': index = 13;
         break;
         default: index = index;
         break;
