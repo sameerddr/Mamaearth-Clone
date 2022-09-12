@@ -492,7 +492,7 @@ p {
     /* transform: translate(70%, -50%); */
     text-align: center;
     color: rgb(0, 0, 0);
-    background-color: rgb(241, 243, 245);
+    background-color: rgb(98, 67, 67);
     width: 410px;
     height: auto;
     display: none;
@@ -510,16 +510,18 @@ p {
     margin-left: 20px;
     font-size: 15px;
     text-transform: none;
-    color: rgb(0, 175, 239);
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
 }
 
 .cart_content2 {
-    width: 90%;
+    margin-bottom: 10px;
+    width: 400px;
     height: 100px;
     background-color: rgb(236, 248, 253);
     border: 1px solid rgba(0, 174, 239, 0.27);
-    margin: 10px;
     border-radius: 5px;
+    margin-left: 5px;
 }
 
 .content2cart {
@@ -540,8 +542,9 @@ p {
     font-size: 10px;
     width: 50%;
     position: absolute;
-    top: 90px;
+    top: 80px;
     left: 70px;
+    color: white;
 }
 
 .coupan {
@@ -574,13 +577,27 @@ p {
 }
 
 .image_name {
+    color: white;
     font-size: 15px;
     margin-left: 10px;
 }
 
 .price_name {
+    color: white;
     font-size: smaller;
     position: relative;
     top: 70px;
-    right: 20px;
+    right: 10px;
+}
+
+.deletebutton {
+    font-size: 15px;
+    position: relative;
+    margin-top: 20px;
+    margin-right: 10px;
+    height: fit-content;
+    padding: 8px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
 }

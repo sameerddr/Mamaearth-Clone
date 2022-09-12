@@ -127,37 +127,32 @@ document.querySelector("#mycarticon").addEventListener("click", function () {
 });
 
 function add_to_cart(e) {
-  // console.log(e.target);
-  console.log(e.target.id);
   var cart_content3 = document.querySelector(".cart_content3");
   fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
     .then((re) => re.json())
     .then((dat) => {
-      // console.log(dat);
-      // console.log(e.target.id);
       console.log("equal hai");
       dat.bestsellers.map((item) => {
         let idvalue = item.id;
-        console.log(idvalue);
-
         if (idvalue == e.target.id) {
-          c = `<div class="cart_data">
+          c = `<div class="cart_data" id=${idvalue} >
             <img src=${item.images[0]} alt="mamaearth" class="cart_image_name">
             <p class="image_name" >${item.name}</p>
             <p class="price_name" > Rs.${item.price}</p>
-            // <button class="deletebutton" onclick="deleteData(event)">Delete Item</button>
+             <button class="deletebutton" id=${idvalue} onclick="deleteData(event)">Drop</button>
             `;
-          // console.log("item", item);
-          localStorage.setItem("itemValues", item);
           cart_content3.innerHTML += c;
-          console.log(c);
         }
       });
     });
-  console.log("jwhdjkwfkfkwsggwbjs");
-  const cart_data = document.querySelector(".cart");
 }
-// }
-function deleteData() {
+function deleteData(e) {
   console.log("WOrkin");
+  let cartData = document.querySelectorAll(".cart_data");
+  console.log(cartData);
+  for (let i = 0; i < cartData.length; i++) {
+    if (cartData[i].id == e.target.id) {
+      cartData[i].parentNode.removeChild(cartData[i]);
+    }
+  }
 }
