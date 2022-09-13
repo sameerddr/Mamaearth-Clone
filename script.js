@@ -146,7 +146,6 @@ function add_to_cart(e) {
 }
 
 function deleteData(e) {
-  console.log("WOrkin");
   let cartData = document.querySelectorAll(".cart_data");
   console.log(cartData);
   for (let i = 0; i < cartData.length; i++) {
