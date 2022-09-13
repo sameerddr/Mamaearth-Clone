@@ -123,7 +123,6 @@ document.querySelector("#mycarticon").addEventListener("click", function () {
 let a = JSON.parse(localStorage.getItem("id")) || [];
 function add_to_cart(e) {
   var cart_content3 = document.querySelector(".cart_content3");
-  var cart_content4 = document.querySelector(".cart_content4");
   fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
     .then((re) => re.json())
     .then((dat) => {
