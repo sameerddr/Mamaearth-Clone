@@ -25,9 +25,6 @@ function beautyData() {
   hair.style.display = "none";
   face.style.display = "none";
   beauty.style.display = "flex";
-  setTimeout(() => {
-    beauty.style.display = "none";
-  }, 10000);
 }
 
 const hair = document.querySelector(".hair-display-none");
@@ -64,9 +61,6 @@ function bodyShowData() {
   hair.style.display = "none";
   face.style.display = "none";
   bodyData.style.display = "flex";
-  setTimeout(() => {
-    bodyData.style.display = "none";
-  }, 10000);
 }
 
 // main section javascript
@@ -126,8 +120,10 @@ document.querySelector("#mycarticon").addEventListener("click", function () {
   document.querySelector(".cart_ITEM").style.display = "none";
 });
 
+let a = JSON.parse(localStorage.getItem("id")) || [];
 function add_to_cart(e) {
   var cart_content3 = document.querySelector(".cart_content3");
+  var cart_content4 = document.querySelector(".cart_content4");
   fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/2/products")
     .then((re) => re.json())
     .then((dat) => {
@@ -142,10 +138,27 @@ function add_to_cart(e) {
              <button class="deletebutton" id=${idvalue} onclick="deleteData(event)">Drop</button>
             `;
           cart_content3.innerHTML += c;
+          a.push(item);
         }
       });
+      console.log(a);
+      localStorage.setItem("id", JSON.stringify(a));
     });
 }
+// function show_cart_data() {
+//   let y = JSON.parse(localStorage.getItem("id")) || [];
+//   console.log(y);
+//   y.map((item) => {
+//     c = `<div class="cart_data" id=${idvalue} >
+//       <img src=${item.images[0]} alt="mamaearth" class="cart_image_name">
+//       <p class="image_name" >${item.name}</p>
+//       <p class="price_name" > Rs.${item.price}</p>
+//        <button class="deletebutton" id=${idvalue} onclick="deleteData(event)">Drop</button>
+//       `;
+//     cart_content3.innerHTML += c;
+
+//   });
+// }
 function deleteData(e) {
   console.log("WOrkin");
   let cartData = document.querySelectorAll(".cart_data");
@@ -156,3 +169,6 @@ function deleteData(e) {
     }
   }
 }
+
+let aaa = localStorage.getItem("id");
+console.log(JSON.parse(aaa));

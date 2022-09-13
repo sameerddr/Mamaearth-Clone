@@ -524,6 +524,11 @@ p {
     margin-left: 5px;
 }
 
+.cart_content3 {
+    height: 300px;
+    overflow-y: scroll;
+}
+
 .content2cart {
     display: flex;
     font-family: Roboto;
@@ -600,4 +605,21 @@ p {
     background-color: #333333;
     color: white;
     cursor: pointer;
+}
+
+.Checkout {
+    padding: 6px 10px;
+    background-color: white;
+    color: blue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Checkout:hover {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
 }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Sign up from</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 15px;
+    }
+    
+    input {
+        padding: 5px 10px;
+        text-align: center;
+        margin: 8px;
+    }
+    
+    form {
+        border: 5px solid #f1f1f1;
+        width: 500px;
+    }
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 16px 8px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    .icon {
+        font-size: 110px;
+        display: flex;
+        justify-content: center;
+        color: #4286f4;
+    }
+    
+    button {
+        background-color: #4286f4;
+        color: white;
+        padding: 14px 0;
+        margin: 10px 0;
+        border: none;
+        cursor: grab;
+        width: 48%;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 18;
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }
+    
+    .formcontainer {
+        text-align: center;
+        margin: 24px 50px 12px;
+    }
+    
+    .container {
+        padding: 16px 0;
+        text-align: center;
+    }
+    
+    strong {
+        margin-right: 10px;
+        font-size: larger;
+    }
+    
+    span.psw {
+        float: right;
+        padding-top: 0;
+        padding-right: 15px;
+    }
+    /* Change styles for span on extra small screens */
+    
+    @media screen and (max-width: 300px) {}
+    
+    span.psw {
+        display: block;
+        margin-top: 8px;
+    }
+</style>
+
+<body>
+
+    <form>
+        <h1>SIGN UP</h1>
+        <div class="icon ">
+            <i class="fas fa-user-circle "></i>
+        </div>
+        <div class="formcontainer ">
+            <div class="container ">
+                <label for="uname "><strong>Username</strong></label> <br>
+                <input type="text " placeholder="Enter Username " name="uname " required> <br>
+                <label for="uname "><strong>Address</strong></label> <br>
+                <input type="text " placeholder="Enter Address " name="address " required> <br>
+                <label for="uname "><strong>Contact Number</strong></label> <br>
+                <input type="number" placeholder="Enter Number " name="number " required> <br>
+                <label for="mail "><strong>E-mail</strong></label> <br>
+                <input type="text " placeholder="Enter E-mail " name="mail " required> <br>
+                <label for="psw "><strong>Password</strong></label> <br>
+                <input type="password " placeholder="Enter Password " name="psw " required> <br>
+            </div>
+            <button type="submit "><strong>SIGN UP</strong></button>
+            <div class="container " style="background-color: #eee ">
+                <label>
+        <input type="checkbox"  checked="checked " name="remember ">Remember me
+        </label>
+                <span class="psw "><a href="# ">Forgot password?</a></span>
+            </div>
+    </form>
+</body>
+
+</html>
