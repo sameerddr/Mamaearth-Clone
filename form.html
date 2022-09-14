@@ -25,7 +25,7 @@
     
     form {
         border: 5px solid #f1f1f1;
-        width: 500px;
+        width: 1000px;
     }
     
     input[type=text],
@@ -74,9 +74,18 @@
         text-align: center;
     }
     
+    .img_log {
+        width: 50px;
+        height: auto;
+    }
+    
     strong {
         margin-right: 10px;
         font-size: larger;
+    }
+    
+    .get {
+        font-size: 20px;
     }
     
     span.psw {
@@ -97,16 +106,14 @@
 <body>
 
     <form>
-        <h1>SIGN UP</h1>
+        <h1> Log in to get started</h1>
         <div class="icon ">
-            <i class="fas fa-user-circle "></i>
+            <img src="https://mamaearth.in/static/mamaearth/login.svg" alt="" class="img_log">
+            <p class="get">Get access to your orders, track previous order & Redeem Mama Cash</p>
         </div>
         <div class="formcontainer ">
             <div class="container ">
-                <label for="uname "><strong>Username</strong></label> <br>
-                <input type="text " placeholder="Enter Username " name="uname " required> <br>
-                <label for="uname "><strong>Address</strong></label> <br>
-                <input type="text " placeholder="Enter Address " name="address " required> <br>
+
                 <label for="uname "><strong>Contact Number</strong></label> <br>
                 <input type="number" placeholder="Enter Number " name="number " required> <br>
                 <label for="mail "><strong>E-mail</strong></label> <br>
@@ -114,12 +121,12 @@
                 <label for="psw "><strong>Password</strong></label> <br>
                 <input type="password " placeholder="Enter Password " name="psw " required> <br>
             </div>
-            <button type="submit "><strong>SIGN UP</strong></button>
+            <button type="submit "><strong>LOGIN WITH OTP</strong></button>
             <div class="container " style="background-color: #eee ">
                 <label>
-        <input type="checkbox"  checked="checked " name="remember ">Remember me
+        <input type="checkbox"  checked="checked " name="remember ">Terms and Conditions Apply
         </label>
-                <span class="psw "><a href="# ">Forgot password?</a></span>
+                <span class="psw "><a href="# ">By Continuing, you agree to Mamaearth's </a></span>
             </div>
     </form>
 </body>

@@ -154,6 +154,3 @@ function deleteData(e) {
     }
   }
 }
-
-let aaa = localStorage.getItem("id");
-console.log(JSON.parse(aaa));

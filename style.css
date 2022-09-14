@@ -405,7 +405,7 @@ p {
     /* transform: translate(70%, -50%); */
     text-align: center;
     color: rgb(0, 0, 0);
-    background-color: rgb(98, 67, 67);
+    background-color: rgb(255, 255, 255);
     width: 410px;
     height: auto;
     display: none;
@@ -423,7 +423,6 @@ p {
     margin-left: 20px;
     font-size: 15px;
     text-transform: none;
-    color: rgb(255, 255, 255);
     margin-top: 5px;
 }
 
@@ -487,6 +486,7 @@ p {
     display: flex;
     border-bottom: 1px solid black;
     margin: 10px;
+    color: black;
 }
 
 .cart_image_name {
@@ -495,13 +495,11 @@ p {
 }
 
 .image_name {
-    color: white;
     font-size: 15px;
     margin-left: 10px;
 }
 
 .price_name {
-    color: white;
     font-size: smaller;
     position: relative;
     top: 70px;
@@ -524,8 +522,6 @@ p {
     padding: 6px 10px;
     background-color: white;
     color: blue;
-    border: none;
-    outline: none;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px;
